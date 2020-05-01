@@ -20,7 +20,7 @@ const Footer = lazy(() => { return import('./components/footer')})
 class App extends Component {
   render(){
     return(
-      <div> 
+      <div className="App"> 
         <Welcome  />
         <Suspense fallback={<Fallback />}>
           <News />
