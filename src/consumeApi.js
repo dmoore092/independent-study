@@ -16,6 +16,7 @@ export default function ConsumeApi(path) {
         }).then(res => {
             setData(res.data)
             setLoading(false)
+            //TODO delete this console log
             console.log(res.data)
         }).catch(e => {
             setError(true)
