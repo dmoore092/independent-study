@@ -7,7 +7,9 @@ Hooks
 
 ## How to run development server
 You will need Apache or another web server, pointed at `/public/proxy.php`
+
 type `node install` to install dependencies
+
 type `nodemon start` to start development server
 
 
