@@ -5,6 +5,8 @@ React.lazy()
 
 Hooks
 
+Bootstrap
+
 ## How to run development server
 You will need Apache or another web server, pointed at `/public/proxy.php`
 
