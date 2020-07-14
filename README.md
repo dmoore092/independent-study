@@ -7,6 +7,8 @@ Axios
 
 React.lazy()
 
+React-modal
+
 Hooks
 
 Bootstrap
