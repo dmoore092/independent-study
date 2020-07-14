@@ -1,3 +1,7 @@
+## Goal
+
+Consume api at http://www.ist.rit.edu/api/ using React
+
 ## Tech Used
 Axios
 
