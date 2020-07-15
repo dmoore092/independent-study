@@ -13,6 +13,8 @@ React-accordion
 
 React-bootstrap
 
+React-bootstrap-table2
+
 Hooks
 
 Bootstrap
