@@ -24,7 +24,7 @@ You will need Apache or another web server, pointed at `/public/proxy.php`
 
 type `node install` to install dependencies
 
-type `nodemon start` to start development server
+type `npm start` to start development server
 
 
 
