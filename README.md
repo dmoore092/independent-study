@@ -13,7 +13,7 @@ React-accordion
 
 React-bootstrap
 
-React-bootstrap-table2
+React-bootstrap-table2/React-bootstrap-table2-paginator
 
 Hooks
 
