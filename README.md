@@ -9,6 +9,8 @@ React.lazy()
 
 React-modal
 
+React-accordion
+
 Hooks
 
 Bootstrap
