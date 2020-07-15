@@ -1,18 +1,67 @@
-import React, { Component } from 'react'
+import React from 'react'
+import consumeApi from '../consumeApi';
 
 
-const divStyle = {
-    height: '100vh',
-    backgroundColor: 'blue'
-  };
-
-class Employment extends Component{
-    render(){
-        return( 
+export default function Welcome() {
+    const {
+        loading, 
+        error, 
+        data
+    } = consumeApi('/employment')
+    if(loading){
+        return(
             <div>
-                <div style={divStyle}>Employment</div>
+                <img src={require('../img/preloader4.png')} alt='preloader' />
+            </div>
+        )
+    }
+    else if(error){
+        return(
+            <div>
+                <div>Error...</div>
+            </div>
+        )
+    }
+    else{
+        return(
+            <div className="mb-5">
+                <h4 className="w-50 mx-auto mt-5 text-white">{data.introduction.title}</h4>
+                <div className="w-50 mx-auto mt-5 text-white">
+                    {data.introduction.content[0].title}<br />
+                    {data.introduction.content[0].description}
+                </div>
+                <div className="w-50 mx-auto mt-5 text-white">
+                    {data.introduction.content[1].title}<br />
+                    {data.introduction.content[1].description}
+                </div>
+                <div className="container mb-5">
+                    <div className="row">
+                        {data.degreeStatistics.statistics.map((stats, i) =>
+                        <div className="col-3 mt-5" key={i}>
+                            <div className="bg-warning text-black">
+                                <div className="card-header">{data.degreeStatistics.statistics[i].value}</div>
+                                <div className="card-body">
+                                    <p className="card-text">{data.degreeStatistics.statistics[i].description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    </div>
+                    <div className="w-50 mx-auto mt-5 text-white">
+                        {data.employers.title}<br />
+                        {data.employers.employerNames.map((employers, i) =>
+                            employers
+                        )}
+                        
+                    </div>
+                    <div className="w-50 mx-auto mt-5 text-white">
+                        {data.careers.title}<br />
+                        {data.careers.careerNames.map((careers, i) =>
+                            careers
+                        )}
+                    </div>
+                </div>
             </div>     
-    )}
+        )
+    }
 }
-
-export default Employment;

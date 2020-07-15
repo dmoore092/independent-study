@@ -2,16 +2,6 @@ import React from 'react'
 import consumeApi from '../consumeApi';
 
 
-const divStyle = {
-    // height: '100vh',
-    // backgroundColor: 'white',
-};
-// const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072ef 65%,#ff8e18 95%',
-//     height: '5px',
-//     width: '100%',
-//     marginTop: '0',
-//     marginBottom: '0'}
-
 export default function Welcome() {
     const {
         loading, 
@@ -20,21 +10,21 @@ export default function Welcome() {
     } = consumeApi('/degrees/graduate/')
     if(loading){
         return(
-            <div style={divStyle}>
+            <div>
                 <img src={require('../img/preloader4.png')} alt='preloader' />
             </div>
         )
     }
     else if(error){
         return(
-            <div style={divStyle}>
+            <div>
                 <div>Error...</div>
             </div>
         )
     }
     else{
         return(
-            <div className="mb-5" style={divStyle}>
+            <div className="mb-5">
                 <h4 className="w-50 mx-auto mt-5 text-white">Our Graduate Degrees</h4>
                 <div className="container mb-5">
                     <div className="row">
@@ -59,18 +49,31 @@ export default function Welcome() {
                             </div>
                         </div>
                         <div className="col-4">
-                        <div className="bg-dark text-white">
-                            <div className="card-header">{data.graduate[2].title}</div>
-                            <div className="card-body">
-                                <p className="card-text">{data.graduate[2].description}</p>
-                                <u>Concentrations:</u>
-                                <p>{data.graduate[2].concentrations}</p>
+                            <div className="bg-dark text-white">
+                                <div className="card-header">{data.graduate[2].title}</div>
+                                <div className="card-body">
+                                    <p className="card-text">{data.graduate[2].description}</p>
+                                    <u>Concentrations:</u>
+                                    <p>{data.graduate[2].concentrations}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 className="w-50 mx-auto mt-5 text-white">Our Graduate Advanced Certificates</h4>
+                    <div className="row mt-5 justify-content-md-center">
+                        <div className="col-4">
+                            <div className="bg-info text-white">
+                                <div className="card-header">{data.graduate[3].availableCertificates[0]}</div>
+                            </div>
+                        </div>
+                        <div className="col-4">
+                            <div className="bg-warning text-black">
+                                <div className="card-header">{data.graduate[3].availableCertificates[1]}</div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>     
+            </div>     
         )
     }
 }
