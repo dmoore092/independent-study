@@ -2,7 +2,7 @@
 
 Consume api at http://www.ist.rit.edu/api/ using React
 
-## Tech Used
+## External Libraries Used
 Axios
 
 React.lazy()
