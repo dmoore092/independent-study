@@ -11,6 +11,8 @@ React-modal
 
 React-accordion
 
+React-bootstrap
+
 Hooks
 
 Bootstrap
