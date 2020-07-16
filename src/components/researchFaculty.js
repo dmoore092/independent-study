@@ -39,7 +39,7 @@ export default function Welcome() {
         return(
             <div className="border border-danger mb-5" style={divStyle}>
                 <hr style={hr} />
-            <h4 className="w-50 mx-auto mt-5 text-white">Citations by faculty</h4>
+            <h4 className="w-50 mx-auto mt-5 text-black">Citations by faculty</h4>
                 <div className="container mb-5">
                     <div className="card-columns">
                         {data.byFaculty.map((faculty, i) =>
