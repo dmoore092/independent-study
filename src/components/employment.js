@@ -1,8 +1,7 @@
 import React from 'react'
 import consumeApi from '../consumeApi';
 
-
-export default function Welcome() {
+export default function Employment() {
     const {
         loading, 
         error, 
@@ -26,14 +25,12 @@ export default function Welcome() {
         return(
             <div className="mb-5">
                 <h4 className="w-50 mx-auto mt-5 text-white">{data.introduction.title}</h4>
-                <div className="w-50 mx-auto mt-5 text-white">
-                    {data.introduction.content[0].title}<br />
-                    {data.introduction.content[0].description}
-                </div>
-                <div className="w-50 mx-auto mt-5 text-white">
-                    {data.introduction.content[1].title}<br />
-                    {data.introduction.content[1].description}
-                </div>
+                {data.introduction.content.map((content, i) => 
+                    <div className="w-50 mx-auto mt-5 text-white" key={i}>
+                        {data.introduction.content[i].title}<br />
+                        {data.introduction.content[i].description}
+                    </div>
+                )}
                 <div className="container mb-5">
                     <div className="row">
                         {data.degreeStatistics.statistics.map((stats, i) =>
@@ -50,14 +47,14 @@ export default function Welcome() {
                     <div className="w-50 mx-auto mt-5 text-white">
                         {data.employers.title}<br />
                         {data.employers.employerNames.map((employers, i) =>
-                            employers
+                            <span key={i}>{employers}</span>
                         )}
                         
                     </div>
                     <div className="w-50 mx-auto mt-5 text-white">
                         {data.careers.title}<br />
                         {data.careers.careerNames.map((careers, i) =>
-                            careers
+                            <span key={i}>{careers}</span>
                         )}
                     </div>
                 </div>

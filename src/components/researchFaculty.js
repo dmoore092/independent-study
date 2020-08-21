@@ -4,7 +4,6 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 
 const divStyle = {
-    // height: '100vh',
     backgroundColor: 'white',
 };
 
@@ -14,8 +13,7 @@ const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072e
     marginTop: '0',
     marginBottom: '0'}
 
-//TODO change all of these functions
-export default function Welcome() {
+export default function ResearchFaculty() {
     const {
         loading, 
         error, 
@@ -43,24 +41,23 @@ export default function Welcome() {
                 <div className="container mb-5">
                     <div className="card-columns">
                         {data.byFaculty.map((faculty, i) =>
-                                <Accordion key={i}>
-                                    <Card style={{ borderRadius: '500px', border: '#F76902' }}>
-                                        <Card.Header style={{ backgroundColor: '#000', color: 'white' }}>
-                                            <Accordion.Toggle as={Card.Header} variant="link" eventKey='{i}'>
-                                                {/* <img src={faculty.imagePath} alt="faculty" /> */}
-                                                <br />{faculty.facultyName}
-                                            </Accordion.Toggle>
-                                        </Card.Header>
-                                        <Accordion.Collapse eventKey='{i}'>
-                                        <Card.Body>
-                                            <h4>Citations:</h4><br />
-                                            {faculty.citations.map((area, i) => 
-                                                <p>{area}</p>
-                                            )}
-                                        </Card.Body>
-                                        </Accordion.Collapse>
-                                    </Card>
-                                </Accordion>
+                            <Accordion key={i}>
+                                <Card style={{ borderRadius: '500px', border: '#F76902' }}>
+                                    <Card.Header style={{ backgroundColor: '#000', color: 'white' }}>
+                                        <Accordion.Toggle as={Card.Header} variant="link" eventKey='{i}'>
+                                            <br />{faculty.facultyName}
+                                        </Accordion.Toggle>
+                                    </Card.Header>
+                                    <Accordion.Collapse eventKey='{i}'>
+                                    <Card.Body>
+                                        <h4>Citations:</h4><br />
+                                        {faculty.citations.map((area, i) => 
+                                            <p key={i}>{area}</p>
+                                        )}
+                                    </Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                            </Accordion>
                         )}
                     </div>
                 </div>

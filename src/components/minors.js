@@ -4,16 +4,16 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 
 const divStyle = {
-    // height: '100vh',
     backgroundColor: 'white',
 };
-const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072ef 65%,#ff8e18 95%',
+const hr = {
+    background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072ef 65%,#ff8e18 95%',
     height: '5px',
     width: '100%',
     marginTop: '0',
     marginBottom: '0'}
 
-export default function Welcome() {
+export default function Minors() {
     const {
         loading, 
         error, 

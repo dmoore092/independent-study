@@ -8,6 +8,7 @@ const divStyle = {
 };
 const orange = {color: '#F76902'};
 const paddingTop = {paddingTop: '20%'}
+
 export default function Welcome() {
         const {
             loading, 

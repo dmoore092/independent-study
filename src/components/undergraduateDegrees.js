@@ -3,7 +3,6 @@ import consumeApi from '../consumeApi';
 
 
 const divStyle = {
-    // height: '100vh',
     backgroundColor: 'white',
 };
 const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072ef 65%,#ff8e18 95%',
@@ -12,7 +11,10 @@ const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072e
     marginTop: '0',
     marginBottom: '0'}
 
-export default function Welcome() {
+//styles for the degree cards
+const styles = ["bg-dark text-white", "bg-warning text-black", "bg-info text-white"]    
+
+export default function UndergraduateDegrees() {
     const {
         loading, 
         error, 
@@ -39,36 +41,19 @@ export default function Welcome() {
                 <h4 className="w-50 mx-auto mt-5">Our Undergraduate Degrees</h4>
                 <div className="container mb-5">
                     <div className="row">
-                        <div className="col-4">
-                            <div className="bg-dark text-white">
-                                <div className="card-header">{data.undergraduate[0].title}</div>
-                                <div className="card-body">
-                                    <p className="card-text">{data.undergraduate[0].description}</p>
-                                    <u>Concentrations:</u>
-                                    <p>{data.undergraduate[0].concentrations}</p>
+                        {data.undergraduate.map((deg, i) =>
+                        //future degrees will auto update
+                            <div className="col-4" key={i}>
+                                <div className={styles[i]}>
+                                    <div className="card-header">{data.undergraduate[i].title}</div>
+                                    <div className="card-body">
+                                        <p className="card-text">{data.undergraduate[i].description}</p>
+                                        <u>Concentrations:</u>
+                                        <p>{data.undergraduate[i].concentrations}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-4">
-                            <div className="bg-warning text-black">
-                                <div className="card-header">{data.undergraduate[1].title}</div>
-                                <div className="card-body">
-                                    <p className="card-text">{data.undergraduate[1].description}</p>
-                                    <u>Concentrations:</u>
-                                    <p>{data.undergraduate[1].concentrations}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-4">
-                        <div className="bg-info text-white">
-                                <div className="card-header">{data.undergraduate[2].title}</div>
-                                <div className="card-body">
-                                    <p className="card-text">{data.undergraduate[2].description}</p>
-                                    <u>Concentrations:</u>
-                                    <p>{data.undergraduate[2].concentrations}</p>
-                                </div>
-                            </div>
-                        </div>
+                        )}
                     </div>
                 </div>
                 <hr style={hr} />

@@ -4,7 +4,6 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 
 const divStyle = {
-    // height: '100vh',
     backgroundColor: 'white',
 };
 
@@ -14,8 +13,7 @@ const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072e
     marginTop: '0',
     marginBottom: '0'}
 
-//TODO change all of these functions
-export default function Welcome() {
+export default function PeopleStaff() {
     const {
         loading, 
         error, 
@@ -43,7 +41,7 @@ export default function Welcome() {
                 <div className="container mb-5">
                     <div className="card-columns"> 
                         {data.staff.map((staff, i) =>
-                        //TODO style accordions, fix nulls
+                        //TODO style accordions, fix values that return null
                             <Accordion key={i}>
                                 <Card>
                                     <Card.Header style={{ backgroundColor: '#000', color: 'white' }}>

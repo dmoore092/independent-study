@@ -5,8 +5,6 @@ const divStyle = {
     height: '100vh',
     //backgroundColor: 'orange'
   };
-const orange = {color: '#F76902'};
-const paddingTop = {paddingTop: '20%'}
 
 export default function New() {
     const {

@@ -4,7 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 
 
-export default function Welcome() {
+export default function PeopleFaculty() {
     const {
         loading, 
         error, 
@@ -35,12 +35,12 @@ export default function Welcome() {
                                  <Card>
                                      <Card.Header style={{ backgroundColor: '#F76902', color: 'black' }}>
                                         <Accordion.Toggle as={Card.Header} variant="link" eventKey='{i}'>
-                                            {/* <img src={faculty.imagePath} alt="faculty" /> */}
                                             <br />{faculty.name}
                                         </Accordion.Toggle>
                                      </Card.Header>
                                      <Accordion.Collapse eventKey='{i}'>
                                      <Card.Body>
+                                         {/* hide empty values */}
                                          <img src={faculty.imagePath} alt="faculty" />
                                          {(() => {if(faculty.username !== ''){ return ( <div>Username: {faculty.username}</div> )}})()}
                                          {(() => {if(faculty.tagline !== ''){ return ( <div>Tagline: {faculty.tagline}</div> )}})()}

@@ -5,6 +5,9 @@ import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.m
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import BootstrapTable from 'react-bootstrap-table-next';
 
+// this section includes the map as well as coop and employment tables
+
+//column headers 
 const coopColumns = [{
     dataField: 'employer',
     text: 'Employer'
@@ -19,6 +22,7 @@ const coopColumns = [{
     text: 'Term'
 }];
 
+//column headers
 const employmentColumns = [{
     dataField: 'employer',
     text: 'Employer'
@@ -35,7 +39,6 @@ const employmentColumns = [{
 
 
 const divStyle = {
-    // height: '100vh',
     backgroundColor: 'white',
 };
 
@@ -53,8 +56,7 @@ const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072e
     marginTop: '0',
     marginBottom: '0'}
 
-//TODO change all of these functions
-export default function Welcome() {
+export default function Map() {
     const {
         loading, 
         error, 

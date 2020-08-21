@@ -1,10 +1,10 @@
 import React from 'react'
 import consumeApi from '../consumeApi';
 import Accordion from 'react-bootstrap/Accordion';
-import { Card, CardDeck } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 
-export default function Welcome() {
+export default function Resources() {
     const {
         loading, 
         error, 
@@ -42,7 +42,7 @@ export default function Welcome() {
                                 <img src={data.studentAmbassadors.ambassadorsImageSource} alt="student ambassadors" />
                                 <br />
                                 {data.studentAmbassadors.subSectionContent.map((content, i)=>
-                                    <div>
+                                    <div key={i}>
                                         <h4>{data.studentAmbassadors.subSectionContent[i].title}</h4>
                                         <p>{data.studentAmbassadors.subSectionContent[i].description}</p>
                                     </div>
@@ -63,7 +63,7 @@ export default function Welcome() {
                                 <div>
                                     <p>{data.studyAbroad.description}</p>
                                     {data.studyAbroad.places.map((places, i) =>
-                                        <div>
+                                        <div key={i}>
                                             <h4>{places.nameOfPlace}</h4>
                                             <p>{places.description}</p>
                                         </div>
@@ -83,7 +83,7 @@ export default function Welcome() {
                                 <div>
                                     <p>{data.studentServices.academicAdvisors.description}</p>
                                     {data.studentServices.professonalAdvisors.advisorInformation.map((advisors, i) =>
-                                        <div>
+                                        <div key={i}>
                                             <h4>{advisors.department}</h4>
                                             <p>{advisors.name} - {advisors.email}</p>
                                         </div>
@@ -103,7 +103,7 @@ export default function Welcome() {
                                 <div>
                                     <p>{data.studentServices.facultyAdvisors.description}</p>
                                     {data.studentServices.istMinorAdvising.minorAdvisorInformation.map((advisors, i) =>
-                                        <div>
+                                        <div key={i}>
                                             <h4>{advisors.title}</h4>
                                             <p>{advisors.advisor} - {advisors.email}</p>
                                         </div>
@@ -137,7 +137,7 @@ export default function Welcome() {
                             <Card.Body>
                                 <h4>Graduate Forms</h4>
                                 {data.forms.graduateForms.map((forms, i) =>
-                                    <div>
+                                    <div key={i}>
                                         <a href={data.forms.graduateForms[i].href} target="_blank" rel="noopener noreferrer" >{data.forms.graduateForms[i].formName}</a>
                                     </div>
                                 )}
@@ -155,7 +155,7 @@ export default function Welcome() {
                             <Accordion.Collapse eventKey="6">
                             <Card.Body>
                                 {data.coopEnrollment.enrollmentInformationContent.map((info, i) =>
-                                    <div>
+                                    <div key={i}>
                                         <h4>{info.title}</h4>
                                         <p>{info.description}</p>
                                     </div>

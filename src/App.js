@@ -1,6 +1,5 @@
-import React, { Component, Suspense, lazy, useState } from 'react'
+import React, { Component, Suspense, lazy} from 'react'
 import './App.css';
-import consumeApi from './consumeApi'
 
 import Fallback from './components/fallback'
 

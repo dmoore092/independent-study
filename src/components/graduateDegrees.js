@@ -1,8 +1,10 @@
 import React from 'react'
 import consumeApi from '../consumeApi';
 
+//alternate styles for the degree cards
+const styles = ["bg-warning text-black", "bg-info text-white", "bg-dark text-white", ]
 
-export default function Welcome() {
+export default function GraduateDegrees() {
     const {
         loading, 
         error, 
@@ -23,54 +25,36 @@ export default function Welcome() {
         )
     }
     else{
+        //slice off the advanced degrees from the graduate degrees. If a degree is added, this will need to be changed
+        const degrees = data.graduate.slice(0, 3)
         return(
             <div className="mb-5">
                 <h4 className="w-50 mx-auto mt-5 text-white">Our Graduate Degrees</h4>
                 <div className="container mb-5">
                     <div className="row">
-                        <div className="col-4">
-                            <div className="bg-warning text-black">
-                                <div className="card-header">{data.graduate[0].title}</div>
-                                <div className="card-body">
-                                    <p className="card-text">{data.graduate[0].description}</p>
-                                    <u>Concentrations:</u>
-                                    <p>{data.graduate[0].concentrations}</p>
+                        {degrees.map((deg, i) =>
+                            <div className="col-4" key={i}>
+                                <div className={styles[i]}>
+                                    <div className="card-header">{data.graduate[i].title}</div>
+                                    <div className="card-body">
+                                        <p className="card-text">{data.graduate[i].description}</p>
+                                        <u>Concentrations:</u>
+                                        <p>{data.graduate[i].concentrations}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-4">
-                            <div className="bg-info text-white">
-                                <div className="card-header">{data.graduate[1].title}</div>
-                                <div className="card-body">
-                                    <p className="card-text">{data.graduate[1].description}</p>
-                                    <u>Concentrations:</u>
-                                    <p>{data.graduate[1].concentrations}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-4">
-                            <div className="bg-dark text-white">
-                                <div className="card-header">{data.graduate[2].title}</div>
-                                <div className="card-body">
-                                    <p className="card-text">{data.graduate[2].description}</p>
-                                    <u>Concentrations:</u>
-                                    <p>{data.graduate[2].concentrations}</p>
-                                </div>
-                            </div>
-                        </div>
+                        )}
                     </div>
                     <h4 className="w-50 mx-auto mt-5 text-white">Our Graduate Advanced Certificates</h4>
                     <div className="row mt-5 justify-content-md-center">
-                        <div className="col-4">
-                            <div className="bg-info text-white">
-                                <div className="card-header">{data.graduate[3].availableCertificates[0]}</div>
+                        {data.graduate[3].availableCertificates.map((deg, i) => 
+                        //if certificate is added, this will auto update
+                            <div className="col-4" key={i}>
+                                <div className="bg-info text-white">
+                                    <div className="card-header">{data.graduate[3].availableCertificates[i]}</div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-4">
-                            <div className="bg-warning text-black">
-                                <div className="card-header">{data.graduate[3].availableCertificates[1]}</div>
-                            </div>
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>     

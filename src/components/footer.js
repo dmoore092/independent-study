@@ -1,5 +1,6 @@
 import React from 'react'
 import consumeApi from '../consumeApi'
+import ContactForm from './contactForm'
 
 const divStyle = {
     // height: '100vh',
@@ -16,10 +17,6 @@ const twitterBlue = {
     backgroundColor: '#50ABF1',
 }
 
-const tigerOrange = {
-    backgroundColor: '#F76902',
-}
-
 const black = {
     backgroundColor: 'black',
 }
@@ -28,14 +25,14 @@ const imgStyle = {
     maxWidth: '25%'
 }
 
-const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072ef 65%,#ff8e18 95%',
+const hr = {
+    background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072ef 65%,#ff8e18 95%',
     height: '5px',
     width: '100%',
     marginTop: '0',
     marginBottom: '0'}
 
-//TODO change all of these functions
-export default function Welcome() {
+export default function Footer() {
     const {
         loading, 
         error, 
@@ -57,6 +54,7 @@ export default function Welcome() {
     }
     else{
         return(
+            //social media presence, contact form and coptright
             <div className="border border-danger mb-5" style={divStyle}>
                 <hr style={hr} />
                 <h4 className="w-50 mx-auto mt-5 text-black">{data.social.title}</h4>
@@ -71,13 +69,11 @@ export default function Welcome() {
                         
                     </div>
                 </div>
-                <div style={tigerOrange} className="py-4">
-                    <p><a href={data.quickLinks[0].href} className="btn btn-dark btn-lg" >{data.quickLinks[0].title}</a></p>
-                </div>
+                <ContactForm />
                 <div style={black} className="pt-2">
-                    <a href={data.quickLinks[1].href} className="text-white px-5" target="_blank" rel="noopener noreferrer">{data.quickLinks[1].title}</a>
-                    <a href={data.quickLinks[2].href} className="text-white px-5" target="_blank" rel="noopener noreferrer">{data.quickLinks[2].title}</a>
-                    <a href={data.quickLinks[3].href} className="text-white px-5" target="_blank" rel="noopener noreferrer">{data.quickLinks[3].title}</a>
+                    {data.quickLinks.map((links, i) =>
+                        <a href={data.quickLinks[i].href} className="text-white px-5" target="_blank" rel="noopener noreferrer" key={i}>{data.quickLinks[i].title}</a>
+                    )}
                     <a href={data.news} className="text-white px-5" target="_blank" rel="noopener noreferrer">News</a>
                     <div dangerouslySetInnerHTML={{ __html: data.copyright.html }} className="text-white mt-3" />;
                 </div>
