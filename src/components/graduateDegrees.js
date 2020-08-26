@@ -33,7 +33,7 @@ export default function GraduateDegrees() {
                 <div className="container mb-5">
                     <div className="row">
                         {degrees.map((deg, i) =>
-                            <div className="col-4" key={i}>
+                            <div className="col-md-4 col-sm-12" key={i}>
                                 <div className={styles[i]}>
                                     <div className="card-header">{data.graduate[i].title}</div>
                                     <div className="card-body">
@@ -49,7 +49,7 @@ export default function GraduateDegrees() {
                     <div className="row mt-5 justify-content-md-center">
                         {data.graduate[3].availableCertificates.map((deg, i) => 
                         //if certificate is added, this will auto update
-                            <div className="col-4" key={i}>
+                            <div className="col-md-4 col-sm-12" key={i}>
                                 <div className="bg-info text-white">
                                     <div className="card-header">{data.graduate[3].availableCertificates[i]}</div>
                                 </div>

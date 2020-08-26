@@ -43,7 +43,7 @@ export default function UndergraduateDegrees() {
                     <div className="row">
                         {data.undergraduate.map((deg, i) =>
                         //future degrees will auto update
-                            <div className="col-4" key={i}>
+                            <div className="col-md-4 col-sm-12" key={i}>
                                 <div className={styles[i]}>
                                     <div className="card-header">{data.undergraduate[i].title}</div>
                                     <div className="card-body">

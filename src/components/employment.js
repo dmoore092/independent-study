@@ -34,7 +34,7 @@ export default function Employment() {
                 <div className="container mb-5">
                     <div className="row">
                         {data.degreeStatistics.statistics.map((stats, i) =>
-                        <div className="col-3 mt-5" key={i}>
+                        <div className="col-md-3 col-sm-12 mt-5" key={i}>
                             <div className="bg-warning text-black">
                                 <div className="card-header">{data.degreeStatistics.statistics[i].value}</div>
                                 <div className="card-body">

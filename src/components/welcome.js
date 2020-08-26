@@ -3,7 +3,7 @@ import consumeApi from '../consumeApi';
 
 
 const divStyle = {
-    height: '100vh',
+    height: '100%',
     color: 'white'
 };
 const orange = {color: '#F76902'};
