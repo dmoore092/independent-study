@@ -41,7 +41,7 @@ const customStyles = {
 export default function News() {
     const {
         data
-    } = consumeApi('/news/older')
+    } = consumeApi('/news/')
 
     var subtitle;
     const [modalIsOpen,setIsOpen] = useState(false);
@@ -60,6 +60,7 @@ export default function News() {
     return(
         <div style={divStyle}>
             {console.log(data.older)}
+
             <button className="btn" style={orange} onClick={openModal}>Check out the latest news!</button>
             <Modal
                 isOpen={modalIsOpen}
@@ -72,13 +73,13 @@ export default function News() {
                 <button class="btn pull-right text-white" style={orange} onClick={closeModal}>close</button>
                 <div className='mt-5'>I am a modal</div>
                 <div>
-                    {data[0].map((news, i) =>
+                    {/* {data.older.map((news, i) =>
                         <div>
                             {/* <h4>{news.date}</h4> */}
                             {/* <small>{news.date}</small> */}
                             {/* <p>{news.description}</p> */}
-                        </div>
-                    )}
+                        {/* </div> */}
+                    {/* )}  */}
                 </div>
                 <form>
                     <input />
