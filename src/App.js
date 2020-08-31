@@ -24,9 +24,9 @@ class App extends Component {
     return(
       <div className="App"> 
         <Welcome  />
-        {/* <Suspense fallback={<Fallback />}>
+        <Suspense fallback={<Fallback />}>
           <News />
-        </Suspense> */}
+        </Suspense>
         <Suspense fallback={<Fallback />}>
           <UndergraduateDegrees />
         </Suspense>
