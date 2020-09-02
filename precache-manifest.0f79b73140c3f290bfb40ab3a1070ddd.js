@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b739cb9576822a7c4dfb4eac3d84fb42",
+    "revision": "a04fe2cbb5db7ef345e91f5e697beea4",
     "url": "/independent-study/index.html"
   },
   {
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/independent-study/static/css/4.829c9cb5.chunk.css"
   },
   {
-    "revision": "0657b0330c51d8eb48bc",
+    "revision": "496273095f3d7f789c4a",
     "url": "/independent-study/static/css/main.c13fbabc.chunk.css"
   },
   {
@@ -96,8 +96,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/independent-study/static/js/9.ad324dc0.chunk.js"
   },
   {
-    "revision": "0657b0330c51d8eb48bc",
-    "url": "/independent-study/static/js/main.a55dc621.chunk.js"
+    "revision": "496273095f3d7f789c4a",
+    "url": "/independent-study/static/js/main.9f026d32.chunk.js"
   },
   {
     "revision": "1dc0416e64324afd43df",
