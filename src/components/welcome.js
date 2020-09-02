@@ -21,7 +21,11 @@ export default function Welcome() {
     const [{ loading, error, data }, refetch] = useAxios({
         url: 'http://ist.rit.edu/api/about/',
         headers: {
-            crossorigin:true
+            'Access-Control-Allow-Headers': 'Content-Type, Accept',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': '*',
+            'Content-Type': 'text/plain',
+            'X-Content-Type-Options': 'nosniff',
             
         }
     })
