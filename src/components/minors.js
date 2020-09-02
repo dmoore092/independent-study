@@ -18,7 +18,7 @@ export default function Minors() {
         loading, 
         error, 
         data
-    } = consumeApi('/minors/')
+    } = consumeApi('http://www.ist.rit.edu/api/minors/')
     if(loading){
         return(
             <div style={divStyle}>

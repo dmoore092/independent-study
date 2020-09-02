@@ -1,6 +1,7 @@
 import React from 'react'
 import consumeApi from '../consumeApi'
 import ContactForm from './contactForm'
+import Axios from 'axios'
 
 const divStyle = {
     // height: '100vh',
@@ -33,11 +34,13 @@ const hr = {
     marginBottom: '0'}
 
 export default function Footer() {
-    const {
-        loading, 
-        error, 
-        data
-    } = consumeApi('/footer/')
+    Axios.get(
+        'www.google.com',
+        params: {
+            
+        }
+
+    )
     if(loading){
         return(
             <div style={divStyle}>

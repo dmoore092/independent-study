@@ -19,7 +19,7 @@ export default function UndergraduateDegrees() {
         loading, 
         error, 
         data
-    } = consumeApi('/degrees/undergraduate/')
+    } = consumeApi('http://www.ist.rit.edu/api/degrees/undergraduate/')
     if(loading){
         return(
             <div style={divStyle}>

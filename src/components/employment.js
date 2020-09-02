@@ -6,7 +6,7 @@ export default function Employment() {
         loading, 
         error, 
         data
-    } = consumeApi('/employment')
+    } = consumeApi('http://ist.rit.edu/api/employment')
     if(loading){
         return(
             <div>

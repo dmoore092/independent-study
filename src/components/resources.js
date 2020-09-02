@@ -9,7 +9,7 @@ export default function Resources() {
         loading, 
         error, 
         data
-    } = consumeApi('/resources/')
+    } = consumeApi('http://www.ist.rit.edu/api/resources/')
     if(loading){
         return(
             <div>

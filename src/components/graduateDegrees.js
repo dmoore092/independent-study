@@ -9,7 +9,7 @@ export default function GraduateDegrees() {
         loading, 
         error, 
         data
-    } = consumeApi('/degrees/graduate/')
+    } = consumeApi('http://www.ist.rit.edu/api/degrees/graduate/')
     if(loading){
         return(
             <div>

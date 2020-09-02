@@ -18,7 +18,7 @@ export default function PeopleStaff() {
         loading, 
         error, 
         data
-    } = consumeApi('/people/')
+    } = consumeApi('http://www.ist.rit.edu/api/people/')
     if(loading){
         return(
             <div style={divStyle}>

@@ -18,7 +18,7 @@ export default function ResearchFaculty() {
         loading, 
         error, 
         data
-    } = consumeApi('/research/')
+    } = consumeApi('http://www.ist.rit.edu/api/research/')
     if(loading){
         return(
             <div style={divStyle}>

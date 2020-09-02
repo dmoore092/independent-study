@@ -9,7 +9,7 @@ export default function PeopleFaculty() {
         loading, 
         error, 
         data
-    } = consumeApi('/people')
+    } = consumeApi('http://www.ist.rit.edu/api/people')
     if(loading){
         return(
             <div>

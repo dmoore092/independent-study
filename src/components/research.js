@@ -9,7 +9,7 @@ export default function Research() {
         loading, 
         error, 
         data
-    } = consumeApi('/research/')
+    } = consumeApi('http://www.ist.rit.edu/api/research/')
     if(loading){
         return(
             <div>

@@ -61,7 +61,7 @@ export default function Map() {
         loading, 
         error, 
         data
-    } = consumeApi('/employment/')
+    } = consumeApi('http://www.ist.rit.edu/api/employment/')
     if(loading){
         return(
             <div style={divStyle}>
