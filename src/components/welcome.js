@@ -3,12 +3,15 @@ import consumeApi from '../consumeApi';
 import axios from 'axios'
 import useAxios from 'axios-hooks'
 
-const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET',
-    'Content-Type': 'application/json',
-    'X-Content-Type-Options': 'nosniff'
-}
+// headers: {
+//     'Access-Control-Allow-Headers': 'Content-Type, Accept',
+//     'Access-Control-Allow-Origin': '*',
+//     'Access-Control-Allow-Methods': '*',
+//     // 'Content-Type': 'text/plain',
+//     'Content-Type':'application/x-www-form-urlencoded',
+//     'X-Content-Type-Options': 'nosniff',
+    
+// }
 
 const divStyle = {
     height: '100%',
@@ -20,14 +23,7 @@ const paddingTop = {paddingTop: '20%'}
 export default function Welcome() {
     const [{ loading, error, data }, refetch] = useAxios({
         url: 'http://ist.rit.edu/api/about/',
-        headers: {
-            'Access-Control-Allow-Headers': 'Content-Type, Accept',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': '*',
-            'Content-Type': 'text/plain',
-            'X-Content-Type-Options': 'nosniff',
-            
-        }
+        headers: {'content-type': 'application/json'},
     })
 
     if(loading){

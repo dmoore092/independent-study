@@ -16,7 +16,7 @@ export default function ConsumeApi(path){
         }).catch(e => {
             setError(true)
         })
-    })
+    }, [path])
     return { loading, error, data }
 }
 // export default function ConsumeApi(path) {
