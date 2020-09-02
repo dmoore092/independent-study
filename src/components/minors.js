@@ -1,7 +1,8 @@
 import React from 'react'
-import consumeApi from '../consumeApi';
-import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
+import ConsumeApi from '../consumeApi.js'
+
+import Accordion from 'react-bootstrap/Accordion'
+import Card from 'react-bootstrap/Card'
 
 const divStyle = {
     backgroundColor: 'white',
@@ -14,11 +15,7 @@ const hr = {
     marginBottom: '0'}
 
 export default function Minors() {
-    const {
-        loading, 
-        error, 
-        data
-    } = consumeApi('http://www.ist.rit.edu/api/minors/')
+    const { loading, error, data } = ConsumeApi('/minors/')
     if(loading){
         return(
             <div style={divStyle}>

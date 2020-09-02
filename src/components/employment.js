@@ -1,12 +1,8 @@
 import React from 'react'
-import consumeApi from '../consumeApi';
+import ConsumeApi from '../consumeApi.js'
 
 export default function Employment() {
-    const {
-        loading, 
-        error, 
-        data
-    } = consumeApi('http://ist.rit.edu/api/employment')
+    const { loading, error, data } = ConsumeApi('/employment/')
     if(loading){
         return(
             <div>

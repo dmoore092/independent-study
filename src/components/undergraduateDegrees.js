@@ -1,5 +1,5 @@
 import React from 'react'
-import consumeApi from '../consumeApi';
+import ConsumeApi from '../consumeApi.js'
 
 
 const divStyle = {
@@ -15,11 +15,7 @@ const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072e
 const styles = ["bg-dark text-white", "bg-warning text-black", "bg-info text-white"]    
 
 export default function UndergraduateDegrees() {
-    const {
-        loading, 
-        error, 
-        data
-    } = consumeApi('http://www.ist.rit.edu/api/degrees/undergraduate/')
+    const { loading, error, data } = ConsumeApi('/degrees/undergraduate/')
     if(loading){
         return(
             <div style={divStyle}>

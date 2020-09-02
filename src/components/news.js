@@ -1,23 +1,23 @@
 import React, { useState } from 'react'
-import consumeApi from '../consumeApi';
-import Modal from 'react-modal';
+// import ConsumeApi from '../consumeApi.js'
+import Modal from 'react-modal'
 
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
-import paginationFactory from 'react-bootstrap-table2-paginator';
-import BootstrapTable from 'react-bootstrap-table-next';
+// import paginationFactory from 'react-bootstrap-table2-paginator';
+// import BootstrapTable from 'react-bootstrap-table-next';
 
 //column headers 
-const newsColumns = [{
-    dataField: 'date',
-    text: 'Date'
-}, {
-    dataField: 'title',
-    text: 'Title'
-}, {
-    dataField: 'description',
-    text: 'Description'
-}];
+// const newsColumns = [{
+//     dataField: 'date',
+//     text: 'Date'
+// }, {
+//     dataField: 'title',
+//     text: 'Title'
+// }, {
+//     dataField: 'description',
+//     text: 'Description'
+// }];
 
 const divStyle = {
     height: '100vh',
@@ -39,9 +39,7 @@ const customStyles = {
 
 
 export default function News() {
-    const {
-        data
-    } = consumeApi('/news/')
+    // const { loading, error, data } = ConsumeApi('/news/')
 
     var subtitle;
     const [modalIsOpen,setIsOpen] = useState(false);
@@ -59,7 +57,7 @@ export default function News() {
     }
     return(
         <div style={divStyle}>
-            {console.log(data.older)}
+            {/* {console.log(data.older)} */}
 
             <button className="btn" style={orange} onClick={openModal}>Check out the latest news!</button>
             <Modal

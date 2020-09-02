@@ -1,15 +1,11 @@
 import React from 'react'
-import consumeApi from '../consumeApi';
+import ConsumeApi from '../consumeApi.js'
 
 //alternate styles for the degree cards
 const styles = ["bg-warning text-black", "bg-info text-white", "bg-dark text-white", ]
 
 export default function GraduateDegrees() {
-    const {
-        loading, 
-        error, 
-        data
-    } = consumeApi('http://www.ist.rit.edu/api/degrees/graduate/')
+    const { loading, error, data } = ConsumeApi('/degrees/graduate/')
     if(loading){
         return(
             <div>

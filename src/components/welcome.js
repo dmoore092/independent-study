@@ -1,17 +1,5 @@
 import React from 'react'
-import consumeApi from '../consumeApi';
-import axios from 'axios'
-import useAxios from 'axios-hooks'
-
-// headers: {
-//     'Access-Control-Allow-Headers': 'Content-Type, Accept',
-//     'Access-Control-Allow-Origin': '*',
-//     'Access-Control-Allow-Methods': '*',
-//     // 'Content-Type': 'text/plain',
-//     'Content-Type':'application/x-www-form-urlencoded',
-//     'X-Content-Type-Options': 'nosniff',
-    
-// }
+import ConsumeApi from '../consumeApi.js'
 
 const divStyle = {
     height: '100%',
@@ -21,10 +9,7 @@ const orange = {color: '#F76902'};
 const paddingTop = {paddingTop: '20%'}
 
 export default function Welcome() {
-    const [{ loading, error, data }, refetch] = useAxios({
-        url: 'http://ist.rit.edu/api/about/',
-        headers: {'content-type': 'application/json'},
-    })
+    const { loading, error, data } = ConsumeApi('/about/')
 
     if(loading){
         return(

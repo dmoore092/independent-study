@@ -1,15 +1,12 @@
 import React from 'react'
-import consumeApi from '../consumeApi';
-import Accordion from 'react-bootstrap/Accordion';
-import { Card } from 'react-bootstrap';
+import ConsumeApi from '../consumeApi.js'
+
+import Accordion from 'react-bootstrap/Accordion'
+import { Card } from 'react-bootstrap'
 
 
 export default function Resources() {
-    const {
-        loading, 
-        error, 
-        data
-    } = consumeApi('http://www.ist.rit.edu/api/resources/')
+    const { loading, error, data } = ConsumeApi('/resources/')
     if(loading){
         return(
             <div>

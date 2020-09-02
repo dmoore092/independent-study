@@ -1,9 +1,10 @@
 import React from 'react'
-import consumeApi from '../consumeApi';
-import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
-import paginationFactory from 'react-bootstrap-table2-paginator';
-import BootstrapTable from 'react-bootstrap-table-next';
+import ConsumeApi from '../consumeApi.js'
+
+import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css'
+import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css'
+import paginationFactory from 'react-bootstrap-table2-paginator'
+import BootstrapTable from 'react-bootstrap-table-next'
 
 // this section includes the map as well as coop and employment tables
 
@@ -57,11 +58,7 @@ const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072e
     marginBottom: '0'}
 
 export default function Map() {
-    const {
-        loading, 
-        error, 
-        data
-    } = consumeApi('http://www.ist.rit.edu/api/employment/')
+    const { loading, error, data } = ConsumeApi('/employment/')
     if(loading){
         return(
             <div style={divStyle}>
