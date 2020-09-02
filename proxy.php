@@ -28,5 +28,5 @@ $url=HOSTNAME.$_GET['path'];
 header("Content-Type: text/plain");
 
 //give it to me!
-echo $result;
+return $result;
 ?>
