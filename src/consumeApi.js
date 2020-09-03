@@ -11,7 +11,7 @@ export default function ConsumeApi(path) {
         setError(false)
         axios({
             method: 'GET',
-            url: 'https://independent-study.herokuapp.com/proxy.php',
+            url: 'https://is-proxy.herokuapp.com/',
             params: { path: path }
         }).then(res => {
             setData(res.data)
