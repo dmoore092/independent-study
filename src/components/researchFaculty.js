@@ -47,9 +47,9 @@ export default function ResearchFaculty() {
                                     </Card.Header>
                                     <Accordion.Collapse eventKey='{i}'>
                                     <Card.Body>
-                                        <h4>Citations:</h4><br />
+                                        <h4 className="text-dark">Citations:</h4><br />
                                         {faculty.citations.map((area, i) => 
-                                            <p key={i}>{area}</p>
+                                            <p key={i} className="text-dark">{area}</p>
                                         )}
                                     </Card.Body>
                                     </Accordion.Collapse>

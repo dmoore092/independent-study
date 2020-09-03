@@ -34,7 +34,7 @@ export default function PeopleStaff() {
         return(
             <div className="border border-danger mb-5" style={divStyle}>
                 <hr style={hr} />
-                <h4 className="w-50 mx-auto mt-5">Staff</h4>
+                <h4 className="w-50 mx-auto mt-5 text-dark">Staff</h4>
                 <div className="container mb-5">
                     <div className="card-columns"> 
                         {data.staff.map((staff, i) =>
@@ -47,7 +47,7 @@ export default function PeopleStaff() {
                                         </Accordion.Toggle>
                                     </Card.Header>
                                     <Accordion.Collapse eventKey='{i}'>
-                                    <Card.Body>
+                                    <Card.Body className="text-dark">
                                         <img src={staff.imagePath} alt="staff" />
                                         {(() => {if(staff.username !== '' || staff.username === 'null'){ return ( <div>Username: {staff.username}</div> )}})()}
                                         {(() => {if(staff.tagline !== ''){ return ( <div>Tagline: {staff.tagline}</div> )}})()}

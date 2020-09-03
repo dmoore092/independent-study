@@ -44,25 +44,25 @@ export default function Resources() {
                                         <p className="text-dark">{data.studentAmbassadors.subSectionContent[i].description}</p>
                                     </div>
                                 )}
-                                <p>{data.studentAmbassadors.note}</p>
+                                <p className="text-dark">{data.studentAmbassadors.note}</p>
                                 <a href={data.studentAmbassadors.applicationFormLink} target="_blank" rel="noopener noreferrer" >Apply Here!</a>
                             </Card.Body>
                             </Accordion.Collapse>
                         </Card>
                         <Card>
                             <Card.Header>
-                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="0">
+                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="0" className="text-dark">
                                 {data.studyAbroad.title}
                             </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
                             <Card.Body>
                                 <div>
-                                    <p>{data.studyAbroad.description}</p>
+                                    <p className="text-dark">{data.studyAbroad.description}</p>
                                     {data.studyAbroad.places.map((places, i) =>
                                         <div key={i}>
-                                            <h4>{places.nameOfPlace}</h4>
-                                            <p>{places.description}</p>
+                                            <h4 className="text-dark">{places.nameOfPlace}</h4>
+                                            <p className="text-dark">{places.description}</p>
                                         </div>
                                     )}
                                 </div>
@@ -71,18 +71,18 @@ export default function Resources() {
                         </Card>
                         <Card>
                             <Card.Header>
-                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="1">
+                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="1" className="text-dark">
                                 {data.studentServices.academicAdvisors.title}
                             </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="1">
                             <Card.Body>
                                 <div>
-                                    <p>{data.studentServices.academicAdvisors.description}</p>
+                                    <p className="text-dark">{data.studentServices.academicAdvisors.description}</p>
                                     {data.studentServices.professonalAdvisors.advisorInformation.map((advisors, i) =>
                                         <div key={i}>
-                                            <h4>{advisors.department}</h4>
-                                            <p>{advisors.name} - {advisors.email}</p>
+                                            <h4 className="text-dark">{advisors.department}</h4>
+                                            <p className="text-dark">{advisors.name} - {advisors.email}</p>
                                         </div>
                                     )}
                                 </div>
@@ -91,18 +91,18 @@ export default function Resources() {
                         </Card>
                         <Card>
                             <Card.Header>
-                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="2">
+                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="2" className="text-dark">
                                 {data.studentServices.facultyAdvisors.title}
                             </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="2">
                             <Card.Body>
                                 <div>
-                                    <p>{data.studentServices.facultyAdvisors.description}</p>
+                                    <p className="text-dark">{data.studentServices.facultyAdvisors.description}</p>
                                     {data.studentServices.istMinorAdvising.minorAdvisorInformation.map((advisors, i) =>
                                         <div key={i}>
-                                            <h4>{advisors.title}</h4>
-                                            <p>{advisors.advisor} - {advisors.email}</p>
+                                            <h4 className="text-dark">{advisors.title}</h4>
+                                            <p className="text-dark">{advisors.advisor} - {advisors.email}</p>
                                         </div>
                                     )}
                                 </div>
@@ -111,14 +111,14 @@ export default function Resources() {
                         </Card>
                         <Card>
                             <Card.Header>
-                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="3">
+                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="3" className="text-dark">
                                 {data.tutorsAndLabInformation.title}
                             </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="3">
                             <Card.Body>
                                 <div>
-                                    <p>{data.tutorsAndLabInformation.description}</p>
+                                    <p className="text-dark">{data.tutorsAndLabInformation.description}</p>
                                     <a href={data.tutorsAndLabInformation.tutoringLabHoursLink} target="_blank" rel="noopener noreferrer">Tutoring and Lab Hours</a>
                                 </div>
                             </Card.Body>
@@ -126,26 +126,26 @@ export default function Resources() {
                         </Card>
                         <Card>
                             <Card.Header>
-                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="5">
+                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="5" className="text-dark">
                                 Forms
                             </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="5">
                             <Card.Body>
-                                <h4>Graduate Forms</h4>
+                                <h4 className="text-dark">Graduate Forms</h4>
                                 {data.forms.graduateForms.map((forms, i) =>
                                     <div key={i}>
                                         <a href={data.forms.graduateForms[i].href} target="_blank" rel="noopener noreferrer" >{data.forms.graduateForms[i].formName}</a>
                                     </div>
                                 )}
-                                <h4>Undergraduate Forms</h4>
+                                <h4 className="text-dark">Undergraduate Forms</h4>
                                 <a href={data.forms.undergraduateForms[0].href} target="_blank" rel="noopener noreferrer" >{data.forms.undergraduateForms[0].formName}</a>
                             </Card.Body>
                             </Accordion.Collapse>
                         </Card>
                         <Card>
                             <Card.Header>
-                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="6">
+                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="6" className="text-dark">
                                 {data.coopEnrollment.title}
                             </Accordion.Toggle>
                             </Card.Header>
@@ -153,8 +153,8 @@ export default function Resources() {
                             <Card.Body>
                                 {data.coopEnrollment.enrollmentInformationContent.map((info, i) =>
                                     <div key={i}>
-                                        <h4>{info.title}</h4>
-                                        <p>{info.description}</p>
+                                        <h4 className="text-dark">{info.title}</h4>
+                                        <p className="text-dark">{info.description}</p>
                                     </div>
                                 )}
                                 <a href={data.coopEnrollment.RITJobZoneGuidelink} target="_blank" rel="noopener noreferrer" >Enroll Here!</a>
