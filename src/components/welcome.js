@@ -10,25 +10,23 @@ const orange = {color: '#F76902'};
 const paddingTop = {paddingTop: '20%'}
 
 export default function Welcome() {
-    // const { loading, error, data } = ConsumeApi('/about/')
-    Axios.get('http://ist.rit.edu/api/about').then((response) => console.log(response))
-    // const { loading, error, data } = ConsumeApi('/about/')
+    const { loading, error, data } = ConsumeApi('/about/')
 
-    // if(loading){
-    //     return(
-    //         <div style={divStyle}>
-    //             <img src={require('../img/preloader4.png')} alt='preloader' />
-    //         </div>
-    //     )
-    // }
-    // else if(error){
-    //     return(
-    //         <div style={divStyle}>
-    //             <div>Error...</div>
-    //         </div>
-    //     )
-    // }
-    // else{
+    if(loading){
+        return(
+            <div style={divStyle}>
+                <img src={require('../img/preloader4.png')} alt='preloader' />
+            </div>
+        )
+    }
+    else if(error){
+        return(
+            <div style={divStyle}>
+                <div>Error...</div>
+            </div>
+        )
+    }
+    else{
         return(
             <div style={divStyle}>
                 <h1 style={paddingTop} className="display-3 w-50 mx-auto"><span style={orange}>Information</span> Sciences &amp; Technologies at RIT</h1>
