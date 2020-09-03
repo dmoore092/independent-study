@@ -23,7 +23,7 @@ class App extends Component {
   render(){
     return(
       <div className="App"> 
-        {/* <Welcome  /> */}
+        <Welcome  />
         {/* <Suspense fallback={<Fallback />}>
           <News />
         </Suspense>
