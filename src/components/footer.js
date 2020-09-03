@@ -71,7 +71,7 @@ export default function Footer() {
                         <a href={data.quickLinks[i].href} className="text-white px-5" target="_blank" rel="noopener noreferrer" key={i}>{data.quickLinks[i].title}</a>
                     )}
                     <a href={data.news} className="text-white px-5" target="_blank" rel="noopener noreferrer">News</a>
-                    <div dangerouslySetInnerHTML={{ __html: data.copyright.html }} className="text-white mt-3" />;
+                    <div dangerouslySetInnerHTML={{ __html: data.copyright.html }} className="text-white mt-3" />
                 </div>
                 <hr style={hr} />
             </div>
