@@ -53,7 +53,7 @@ export default function Footer() {
             //social media presence, contact form and coptright
             <div className="border border-danger mb-5" style={divStyle}>
                 <hr style={hr} />
-                <h4 className="w-50 mx-auto mt-5 text-black">{data.social.title}</h4>
+                <h4 className="w-50 mx-auto mt-5 text-dark">{data.social.title}</h4>
                 <div><a href={data.social.facebook} target="_blank" rel="noopener noreferrer">Follow US on Facebook!</a></div>
                 <div><a href={data.social.twitter} target="_blank" rel="noopener noreferrer">Follow US on Twitter!</a></div>
                 <div className="card text-white bg-primary mb-3" style={cardStyle}>

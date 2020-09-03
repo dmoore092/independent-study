@@ -12,7 +12,7 @@ const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072e
     marginBottom: '0'}
 
 //styles for the degree cards
-const styles = ["bg-dark text-white", "bg-warning text-black", "bg-info text-white"]    
+const styles = ["bg-dark text-white", "bg-warning text-dark", "bg-info text-white"]    
 
 export default function UndergraduateDegrees() {
     const { loading, error, data } = ConsumeApi('/degrees/undergraduate/')
