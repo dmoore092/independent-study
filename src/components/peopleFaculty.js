@@ -35,7 +35,7 @@ export default function PeopleFaculty() {
                                         </Accordion.Toggle>
                                      </Card.Header>
                                      <Accordion.Collapse eventKey='{i}'>
-                                     <Card.Body>
+                                     <Card.Body className="text-dark">
                                          {/* hide empty values */}
                                          <img src={faculty.imagePath} alt="faculty" />
                                          {(() => {if(faculty.username !== ''){ return ( <div>Username: {faculty.username}</div> )}})()}

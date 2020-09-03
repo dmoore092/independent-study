@@ -39,7 +39,7 @@ export default function Minors() {
                     <div className="card-columns"> 
                         {data.UgMinors.map((minors, i) =>
                             <Accordion key={i}>
-                                <Card>
+                                <Card className="text-dark">
                                     <Card.Header>
                                     <Accordion.Toggle as={Card.Header} variant="link" eventKey='{i}'>
                                         {minors.title}

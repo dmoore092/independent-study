@@ -38,7 +38,7 @@ export default function Research() {
                                     </Accordion.Toggle>
                                     </Card.Header>
                                     <Accordion.Collapse eventKey='{i}'>
-                                    <Card.Body>
+                                    <Card.Body className="text-dark">
                                         <h4>Citations:</h4><br />
                                         {interestArea.citations.map((area, i) => 
                                             <p key={i}>{area}</p>
