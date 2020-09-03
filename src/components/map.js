@@ -80,7 +80,7 @@ export default function Map() {
                 <h4 className="w-50 mx-auto mt-5">Where our students work</h4>
                 <div className="container mb-5">
                     <div className="card-columns"> 
-                    <iframe src="http://ist.rit.edu/api/map/" title="where out students work" scrolling="no" style={iframeStyle}></iframe>
+                    <iframe src="http://ist.rit.edu/api/map.php" title="where out students work" scrolling="no" style={iframeStyle}></iframe>
                     </div>
                 </div>
                 <div>
