@@ -11,7 +11,7 @@ const paddingTop = {paddingTop: '20%'}
 
 export default function Welcome() {
     // const { loading, error, data } = ConsumeApi('/about/')
-    Axios.get('http://ist.rit.edu/api/about').then((response) => console.log(response))
+    // Axios.get('http://ist.rit.edu/api/about').then((response) => console.log(response))
     // const { loading, error, data } = ConsumeApi('/about/')
 
     // if(loading){
