@@ -30,7 +30,7 @@ export default function Resources() {
                     <Accordion defaultActiveKey="4">
                         <Card>
                             <Card.Header>
-                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="4">
+                            <Accordion.Toggle as={Card.Header} variant="link" eventKey="4" className="text-dark">
                                 {data.studentAmbassadors.title}
                             </Accordion.Toggle>
                             </Card.Header>
