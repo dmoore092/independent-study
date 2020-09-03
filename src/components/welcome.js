@@ -31,7 +31,6 @@ export default function Welcome() {
             <div style={divStyle}>
                 <h1 style={paddingTop} className="display-3 w-50 mx-auto"><span style={orange}>Information</span> Sciences &amp; Technologies at RIT</h1>
                 <div className='bg-light text-dark w-75 mx-auto mt-1' >
-                {console.log(data)}
                     <h4 className='pt-2'>{data.title}</h4>
                     <p>{data.description}</p>
                     <blockquote className='blockquote'>&quot;{data.quote}&quot;</blockquote>
