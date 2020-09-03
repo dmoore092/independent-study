@@ -5,6 +5,7 @@ error_reporting(0);
 // ini_set('display_startup_errors', 1);
 header("Access-Control-Allow-Origin: *");
 
+
 //sets the base of the url we want to hit
 define ('HOSTNAME', 'http://www.ist.rit.edu/api');
 
