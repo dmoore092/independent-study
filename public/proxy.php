@@ -1,6 +1,8 @@
 <?php
 //supress warnings & errors
 error_reporting(0);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
 header("Access-Control-Allow-Origin: *");
 
 //sets the base of the url we want to hit
