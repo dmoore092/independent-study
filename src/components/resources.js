@@ -40,8 +40,8 @@ export default function Resources() {
                                 <br />
                                 {data.studentAmbassadors.subSectionContent.map((content, i)=>
                                     <div key={i}>
-                                        <h4 className="text-black">{data.studentAmbassadors.subSectionContent[i].title}</h4>
-                                        <p className="text-black">{data.studentAmbassadors.subSectionContent[i].description}</p>
+                                        <h4 className="text-dark">{data.studentAmbassadors.subSectionContent[i].title}</h4>
+                                        <p className="text-dark">{data.studentAmbassadors.subSectionContent[i].description}</p>
                                     </div>
                                 )}
                                 <p>{data.studentAmbassadors.note}</p>
