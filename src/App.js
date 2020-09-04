@@ -5,7 +5,7 @@ import Fallback from './components/fallback'
 
 import Welcome from './components/welcome'
 
-const News = lazy(() => { return import('./components/news')})
+// const News = lazy(() => { return import('./components/news')})
 const UndergraduateDegrees = lazy(() => { return import('./components/undergraduateDegrees')})
 const GraduateDegrees = lazy(() => { return import('./components/graduateDegrees')})
 const Minors = lazy(() => { return import('./components/minors')})
@@ -23,9 +23,9 @@ class App extends Component {
     return(
       <div className="App"> 
         <Welcome  />
-        <Suspense fallback={<Fallback />}>
+        {/* <Suspense fallback={<Fallback />}>
           <News />
-        </Suspense>
+        </Suspense> */}
         <Suspense fallback={<Fallback />}>
           <UndergraduateDegrees />
         </Suspense>
