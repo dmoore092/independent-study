@@ -4,6 +4,11 @@ import ConsumeApi from '../consumeApi.js'
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 
+const cardScrollStyle = {
+    overflowY: 'scroll',
+    overflowX: 'hidden',
+    maxHeight: '300px'
+}
 
 export default function Research() {
     const { loading, error, data } = ConsumeApi('/research/')
@@ -33,16 +38,17 @@ export default function Research() {
                                 <Card style={{ borderRadius: '500px' }}>
                                     <Card.Header style={{ backgroundColor: '#F76902', color: 'black' }}>
                                     <Accordion.Toggle as={Card.Header} variant="link" eventKey='{i}'>
-                                        {/* <img src={faculty.imagePath} alt="faculty" /> */}
                                         <br />{interestArea.areaName}
                                     </Accordion.Toggle>
                                     </Card.Header>
                                     <Accordion.Collapse eventKey='{i}'>
                                     <Card.Body className="text-dark">
                                         <h4>Citations:</h4><br />
-                                        {interestArea.citations.map((area, i) => 
-                                            <p key={i}>{area}</p>
-                                        )}
+                                        <div style={cardScrollStyle}>
+                                            {interestArea.citations.map((area, i) => 
+                                                <p key={i} >{area}</p>
+                                            )}
+                                        </div>
                                     </Card.Body>
                                     </Accordion.Collapse>
                                 </Card>

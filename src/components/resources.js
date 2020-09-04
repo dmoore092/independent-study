@@ -4,6 +4,11 @@ import ConsumeApi from '../consumeApi.js'
 import Accordion from 'react-bootstrap/Accordion'
 import { Card } from 'react-bootstrap'
 
+const cardScrollStyle = {
+    overflowY: 'scroll',
+    overflowX: 'hidden',
+    maxHeight: '450px'
+}
 
 export default function Resources() {
     const { loading, error, data } = ConsumeApi('/resources/')
@@ -35,7 +40,7 @@ export default function Resources() {
                             </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="4">
-                            <Card.Body>
+                            <Card.Body style={cardScrollStyle}>
                                 <img src={data.studentAmbassadors.ambassadorsImageSource} alt="student ambassadors" />
                                 <br />
                                 {data.studentAmbassadors.subSectionContent.map((content, i)=>
@@ -57,7 +62,7 @@ export default function Resources() {
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
                             <Card.Body>
-                                <div>
+                                <div style={cardScrollStyle}>
                                     <p className="text-dark">{data.studyAbroad.description}</p>
                                     {data.studyAbroad.places.map((places, i) =>
                                         <div key={i}>
@@ -76,7 +81,7 @@ export default function Resources() {
                             </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="1">
-                            <Card.Body>
+                            <Card.Body style={cardScrollStyle}>
                                 <div>
                                     <p className="text-dark">{data.studentServices.academicAdvisors.description}</p>
                                     {data.studentServices.professonalAdvisors.advisorInformation.map((advisors, i) =>
@@ -97,7 +102,7 @@ export default function Resources() {
                             </Card.Header>
                             <Accordion.Collapse eventKey="2">
                             <Card.Body>
-                                <div>
+                                <div style={cardScrollStyle}>
                                     <p className="text-dark">{data.studentServices.facultyAdvisors.description}</p>
                                     {data.studentServices.istMinorAdvising.minorAdvisorInformation.map((advisors, i) =>
                                         <div key={i}>
@@ -117,7 +122,7 @@ export default function Resources() {
                             </Card.Header>
                             <Accordion.Collapse eventKey="3">
                             <Card.Body>
-                                <div>
+                                <div style={cardScrollStyle}>
                                     <p className="text-dark">{data.tutorsAndLabInformation.description}</p>
                                     <a href={data.tutorsAndLabInformation.tutoringLabHoursLink} target="_blank" rel="noopener noreferrer">Tutoring and Lab Hours</a>
                                 </div>
@@ -134,7 +139,7 @@ export default function Resources() {
                             <Card.Body>
                                 <h4 className="text-dark">Graduate Forms</h4>
                                 {data.forms.graduateForms.map((forms, i) =>
-                                    <div key={i}>
+                                    <div key={i} style={cardScrollStyle}>
                                         <a href={data.forms.graduateForms[i].href} target="_blank" rel="noopener noreferrer" >{data.forms.graduateForms[i].formName}</a>
                                     </div>
                                 )}
@@ -152,7 +157,7 @@ export default function Resources() {
                             <Accordion.Collapse eventKey="6">
                             <Card.Body>
                                 {data.coopEnrollment.enrollmentInformationContent.map((info, i) =>
-                                    <div key={i}>
+                                    <div key={i} style={cardScrollStyle}>
                                         <h4 className="text-dark">{info.title}</h4>
                                         <p className="text-dark">{info.description}</p>
                                     </div>

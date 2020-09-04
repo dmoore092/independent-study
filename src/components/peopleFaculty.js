@@ -4,6 +4,11 @@ import ConsumeApi from '../consumeApi.js'
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 
+const imgStyle = {
+    maxHeight: '200px',
+    maxWidth: '200px'
+}
+
 export default function PeopleFaculty() {
     const { loading, error, data } = ConsumeApi('/people/')
     if(loading){
@@ -37,7 +42,7 @@ export default function PeopleFaculty() {
                                      <Accordion.Collapse eventKey='{i}'>
                                      <Card.Body className="text-dark">
                                          {/* hide empty values */}
-                                         <img src={faculty.imagePath} alt="faculty" />
+                                         <img src={faculty.imagePath} alt="faculty" style={imgStyle} />
                                          {(() => {if(faculty.username !== ''){ return ( <div>Username: {faculty.username}</div> )}})()}
                                          {(() => {if(faculty.tagline !== ''){ return ( <div>Tagline: {faculty.tagline}</div> )}})()}
                                          {(() => {if(faculty.title !== ''){ return ( <div>Title: {faculty.title}</div> )}})()}

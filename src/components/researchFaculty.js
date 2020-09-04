@@ -8,6 +8,12 @@ const divStyle = {
     backgroundColor: 'white',
 };
 
+const cardScrollStyle = {
+    overflowY: 'scroll',
+    overflowX: 'hidden',
+    maxHeight: '300px'
+}
+
 const hr = {background: 'linear-gradient(to right,#87be31 15%,#ff0c64 35%,#0072ef 65%,#ff8e18 95%',
     height: '5px',
     width: '100%',
@@ -48,9 +54,11 @@ export default function ResearchFaculty() {
                                     <Accordion.Collapse eventKey='{i}'>
                                     <Card.Body>
                                         <h4 className="text-dark">Citations:</h4><br />
-                                        {faculty.citations.map((area, i) => 
-                                            <p key={i} className="text-dark">{area}</p>
-                                        )}
+                                        <div style={cardScrollStyle}>
+                                            {faculty.citations.map((area, i) => 
+                                                <p key={i} className="text-dark">{area}</p>
+                                            )}
+                                        </div>
                                     </Card.Body>
                                     </Accordion.Collapse>
                                 </Card>
