@@ -1,3 +1,7 @@
+## Located at
+
+https://independent-study.herokuapp.com/
+
 ## Goal
 
 Consume api at http://www.ist.rit.edu/api/ using React
